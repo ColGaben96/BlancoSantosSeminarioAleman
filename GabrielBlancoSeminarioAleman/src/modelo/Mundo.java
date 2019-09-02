@@ -3,21 +3,20 @@ package modelo;
 public class Mundo 
 {
 	private Archivo archivo;
-	private Mundo mundo;
+	private Seminario seminario;
 	
 	public Mundo()
 	{
 		archivo = new Archivo();
-		mundo = new Mundo();
+		seminario = new Seminario();
 	}
 
 	public Archivo getArchivo() {
 		return archivo;
 	}
 
-	public Mundo getMundo() {
-		return mundo;
+	public Seminario getSeminario() {
+		return seminario;
 	}
-	
 	
 }

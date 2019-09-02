@@ -15,12 +15,12 @@ public class Archivo
 	{
 		try 
 		{
-			File elDirectorio = new File("./docs/SysFiles/Sesion"+a+".txt");
+			File elDirectorio = new File("./docs/SysFiles");
 			if(!elDirectorio.exists())
 			{
 				elDirectorio.mkdir();
 			}
-			file = new File(elDirectorio+"/");
+			file = new File(elDirectorio+"/Sesion"+a+".txt");
 			fileWriter = new FileWriter(file);
 			printWriter = new PrintWriter(fileWriter);
 			for (int i = 0; i < 1; i++) 

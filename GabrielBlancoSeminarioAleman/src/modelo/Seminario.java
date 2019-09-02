@@ -2,25 +2,32 @@ package modelo;
 
 public class Seminario 
 {
-	private double a = Math.random();
 	private String[] sesion;
 	
 	public Seminario()
 	{
 		sesion = new String[30];
-		for (int i = 0; i < sesion.length; i++) 
+	}
+	
+	public String escribirLista()
+	{
+		String lol = "";
+		for (int i = 0; i < sesion.length; i++)
 		{
-			sesion[i] = "Sujeto "+i;
+			sesion[i] += "Sujeto "+i+"\n";
+			lol = sesion[i];
 		}
+		return lol;
 	}
 	
 	public String capturarSujeto()
 	{
+		int a = (int) Math.random();
 		for (int i = 0; i < sesion.length; i++) 
 		{
 			try 
 			{
-				sesion[(int) a] += " He sido seleccionado";
+			     sesion[a] += " He sido seleccionado";
 			} 
 			catch (Exception e) 
 			{
@@ -29,5 +36,9 @@ public class Seminario
 		}
 		
 		return "Se ha seleccionado al sujeto";
+	}
+
+	public String[] getSesion() {
+		return sesion;
 	}
 }
