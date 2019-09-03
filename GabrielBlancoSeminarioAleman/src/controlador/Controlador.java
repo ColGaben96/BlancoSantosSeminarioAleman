@@ -36,6 +36,8 @@ public class Controlador
 				case("salir"):
 					activo = false;
 					break;
+				case("verificacion"):
+					gui.WarningMessage("Mirar consola o archivo");	
 				case("seminario"):
 					gui.Information(mundo.getSeminario().capturarSujeto());
 					for (int i = 0; i < 1; i++) 
