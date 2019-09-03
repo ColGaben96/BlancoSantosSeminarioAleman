@@ -56,7 +56,7 @@ public class Archivo
 		}
 		catch (FileNotFoundException e)
 		{
-			return "";
+			return " ";
 		}
 		catch (IOException e) 
 		{
