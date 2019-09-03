@@ -41,4 +41,9 @@ public class Seminario
 	public String[] getSesion() {
 		return sesion;
 	}
+
+	public void verificarCupo() 
+	{
+		
+	}
 }
