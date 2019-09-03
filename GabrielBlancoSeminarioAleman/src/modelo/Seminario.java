@@ -42,8 +42,5 @@ public class Seminario
 		return sesion;
 	}
 
-	public void verificarCupo() 
-	{
-		
-	}
+	
 }
