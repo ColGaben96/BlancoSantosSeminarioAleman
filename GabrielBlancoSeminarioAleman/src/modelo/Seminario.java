@@ -11,13 +11,13 @@ public class Seminario
 	
 	public String escribirLista()
 	{
-		String lol = "";
+		String string = "";
 		for (int i = 0; i < sesion.length; i++)
 		{
 			sesion[i] += "Sujeto "+i+"\n";
-			lol = sesion[i];
+			string += sesion[i];
 		}
-		return lol;
+		return string;
 	}
 	
 	public String capturarSujeto()

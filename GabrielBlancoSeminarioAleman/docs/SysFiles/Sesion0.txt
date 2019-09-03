@@ -1,0 +1,33 @@
+Comienza el archivo: 03/24/2019 10:24:44
+
+nullSujeto 0
+nullSujeto 1
+nullSujeto 2
+nullSujeto 3
+nullSujeto 4
+nullSujeto 5
+nullSujeto 6
+nullSujeto 7
+nullSujeto 8
+nullSujeto 9
+nullSujeto 10
+nullSujeto 11
+nullSujeto 12
+nullSujeto 13
+nullSujeto 14
+nullSujeto 15
+nullSujeto 16
+nullSujeto 17
+nullSujeto 18
+nullSujeto 19
+nullSujeto 20
+nullSujeto 21
+nullSujeto 22
+nullSujeto 23
+nullSujeto 24
+nullSujeto 25
+nullSujeto 26
+nullSujeto 27
+nullSujeto 28
+nullSujeto 29
+

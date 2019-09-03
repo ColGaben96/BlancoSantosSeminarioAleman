@@ -1,6 +1,9 @@
 package modelo;
 
 import java.io.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Archivo 
 {
@@ -33,7 +36,6 @@ public class Archivo
 		{
 			return "Ocurrio un error en la escritura del archivo.\n Causas: "+e.getMessage();
 		}
-		a++;
 		return "Se ha creado el archivo correctamente en "+file.getAbsolutePath();
 	}
 	
@@ -56,7 +58,9 @@ public class Archivo
 		}
 		catch (FileNotFoundException e)
 		{
-			return " ";
+			Date date = new Date();
+			DateFormat format = new SimpleDateFormat("dd/mm/yyyy hh:mm:ss");
+			return "Comienza el archivo: "+format.format(date)+"\n";
 		}
 		catch (IOException e) 
 		{
