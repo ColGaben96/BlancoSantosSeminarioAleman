@@ -42,9 +42,7 @@ public class Controlador
 				case("seminario"):
 					//gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirLista()+mundo.getSeminario().capturarSujeto()));
 					gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirLista()));
-					break;
-				case("capturar"):
-					gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().capturarSujeto()));
+					mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().capturarSujeto());
 					break;
 				}
 			} 

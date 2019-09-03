@@ -1,4 +1,4 @@
-Comienza el archivo: 03/49/2019 10:49:03
+Comienza el archivo: 03/20/2019 11:20:40
 
 Sujeto 0
 Sujeto 1
@@ -32,5 +32,5 @@ Sujeto 28
 Sujeto 29
 
 
-Se eligió a Sujeto 0
+Se eligió a Sujeto 8
 
