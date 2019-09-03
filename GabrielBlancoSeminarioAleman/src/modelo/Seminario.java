@@ -42,6 +42,7 @@ public class Seminario
 		return sesion;
 	}
 
+
 	public String verificarCupo() 
 	{
 		int cantidadCupo = 0;
@@ -55,4 +56,5 @@ public class Seminario
 		
 		return "Cantidad de cupo: "+cantidadCupo;
 	}
+
 }
