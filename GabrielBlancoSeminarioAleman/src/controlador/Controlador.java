@@ -37,13 +37,10 @@ public class Controlador
 					activo = false;
 					break;
 				case("verificacion"):
-					gui.WarningMessage("Mirar consola o archivo");	
+					gui.WarningMessage(mundo.getSeminario().verificarCupo());
+					break;
 				case("seminario"):
-					gui.Information(mundo.getSeminario().capturarSujeto());
-					for (int i = 0; i < 1; i++) 
-					{
-						mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirLista());
-					}
+					gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirLista()+mundo.getSeminario().capturarSujeto()));
 					break;
 				}
 			} 

@@ -42,8 +42,17 @@ public class Seminario
 		return sesion;
 	}
 
-	public void verificarCupo() 
+	public String verificarCupo() 
 	{
+		int cantidadCupo = 0;
+		for (int i = 0; i < sesion.length; i++) 
+		{
+			if(sesion[i] == null)
+			{
+				i = cantidadCupo+30;
+			}
+		}
 		
+		return "Cantidad de cupo: "+cantidadCupo;
 	}
 }
