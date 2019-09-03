@@ -12,7 +12,6 @@ public class Archivo
 	private FileReader fileReader;
 	private PrintWriter printWriter;
 	private BufferedReader bufferedReader;
-	private int a = 0;
 	
 	public String escribirArchivo(String pLinea)
 	{
@@ -23,7 +22,7 @@ public class Archivo
 			{
 				elDirectorio.mkdir();
 			}
-			file = new File(elDirectorio+"/Sesion"+a+".txt");
+			file = new File(elDirectorio+"/Sesion.txt");
 			fileWriter = new FileWriter(file);
 			printWriter = new PrintWriter(fileWriter);
 			for (int i = 0; i < 1; i++) 
@@ -44,7 +43,7 @@ public class Archivo
 		String lineaAnterior = "";
 		try 
 		{
-			File elDirectorio = new File("./docs/SysFiles/Sesion"+a+".txt");
+			File elDirectorio = new File("./docs/SysFiles/Sesion.txt");
 			file = new File(elDirectorio+"/");
 			fileReader = new FileReader(file);
 			bufferedReader = new BufferedReader(fileReader);

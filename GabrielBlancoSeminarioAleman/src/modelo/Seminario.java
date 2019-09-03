@@ -3,6 +3,7 @@ package modelo;
 public class Seminario 
 {
 	private String[] sesion;
+	private double numRandom = Math.random()*10;
 	
 	public Seminario()
 	{
@@ -22,12 +23,12 @@ public class Seminario
 	
 	public String capturarSujeto()
 	{
-		int a = (int) Math.random();
+		int numero = (int) numRandom;
 		for (int i = 0; i < sesion.length; i++) 
 		{
 			try 
 			{
-			     sesion[a] += " He sido seleccionado";
+			     return "Se eligió a "+sesion[numero];
 			} 
 			catch (Exception e) 
 			{
