@@ -15,7 +15,7 @@ public class Seminario
 		String string = "";
 		for (int i = 0; i < sesion.length; i++)
 		{
-			sesion[i] += "Sujeto "+i+"\n";
+			sesion[i] = "Sujeto "+i+"\n";
 			string += sesion[i];
 		}
 		return string;
