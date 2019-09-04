@@ -40,9 +40,9 @@ public class Controlador
 					gui.WarningMessage(mundo.getSeminario().verificarCupo());
 					break;
 				case("seminario"):
-					//gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirLista()+mundo.getSeminario().capturarSujeto()));
 					gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirLista()));
 					mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+mundo.getSeminario().capturarSujeto());
+					mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);
 					break;
 				}
 			} 

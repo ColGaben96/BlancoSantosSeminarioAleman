@@ -3,7 +3,6 @@ package modelo;
 public class Seminario 
 {
 	private String[] sesion;
-	private double numRandom = Math.random()*10;
 	
 	public Seminario()
 	{
@@ -23,7 +22,12 @@ public class Seminario
 	
 	public String capturarSujeto()
 	{
+		double numRandom = Math.random()*10;
 		int numero = (int) numRandom;
+		if(numero < 0)
+		{
+			numero *= -1;
+		}
 		for (int i = 0; i < sesion.length; i++) 
 		{
 			try 
@@ -32,7 +36,7 @@ public class Seminario
 			} 
 			catch (Exception e) 
 			{
-				// TODO: handle exception
+				// No hace nada porque ya se sabe que la excepcion es gracias a un index fuera del limite.
 			}
 		}
 		

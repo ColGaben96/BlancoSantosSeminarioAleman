@@ -12,6 +12,7 @@ public class Archivo
 	private FileReader fileReader;
 	private PrintWriter printWriter;
 	private BufferedReader bufferedReader;
+	private int numeroSesion = 0;
 	
 	public String escribirArchivo(String pLinea)
 	{
@@ -22,7 +23,7 @@ public class Archivo
 			{
 				elDirectorio.mkdir();
 			}
-			file = new File(elDirectorio+"/Sesion.txt");
+			file = new File(elDirectorio+"/Sesion "+numeroSesion+".txt");
 			fileWriter = new FileWriter(file);
 			printWriter = new PrintWriter(fileWriter);
 			for (int i = 0; i < 1; i++) 
@@ -43,7 +44,7 @@ public class Archivo
 		String lineaAnterior = "";
 		try 
 		{
-			File elDirectorio = new File("./docs/SysFiles/Sesion.txt");
+			File elDirectorio = new File("./docs/SysFiles/Sesion "+numeroSesion+".txt");
 			file = new File(elDirectorio+"/");
 			fileReader = new FileReader(file);
 			bufferedReader = new BufferedReader(fileReader);
@@ -68,4 +69,13 @@ public class Archivo
 		
 		return lineaAnterior;
 	}
+
+	public int getNumeroSesion() {
+		return numeroSesion;
+	}
+
+	public void setNumeroSesion(int numeroSesion) {
+		this.numeroSesion = numeroSesion;
+	}
+	
 }
