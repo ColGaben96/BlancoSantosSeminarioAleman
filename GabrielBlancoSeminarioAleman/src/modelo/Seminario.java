@@ -22,11 +22,15 @@ public class Seminario
 	
 	public String capturarSujeto()
 	{
-		double numRandom = Math.random()*10;
+		double numRandom = Math.random()*100;
 		int numero = (int) numRandom;
 		if(numero < 0)
 		{
 			numero *= -1;
+		}
+		if(numero >30)
+		{
+			numero /= 10;
 		}
 		for (int i = 0; i < sesion.length; i++) 
 		{
