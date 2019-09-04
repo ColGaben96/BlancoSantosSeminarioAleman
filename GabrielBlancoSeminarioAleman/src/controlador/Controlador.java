@@ -44,6 +44,12 @@ public class Controlador
 					mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+mundo.getSeminario().capturarSujeto());
 					mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);
 					break;
+				case("seminario2"):
+					mundo.getSeminario().setSesion(mundo.getArchivo().leerDesdenombresTXT());
+					gui.Information(mundo.getArchivo().escribirArchivo(mundo.getSeminario().escribirdesdeNombres(mundo.getArchivo().lecturaArchivo())));
+					mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+mundo.getSeminario().capturarSujeto());
+					mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);
+					break;
 				}
 			} 
 			catch (Exception errorConsola) 

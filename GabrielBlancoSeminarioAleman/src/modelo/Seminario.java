@@ -2,11 +2,15 @@ package modelo;
 
 public class Seminario 
 {
-	private String[] sesion;
+	private String[] sesion, rol;
 	
 	public Seminario()
 	{
-		sesion = new String[30];
+		sesion = new String[32];
+		rol = new String[3];
+		rol[0] = "Relator";
+		rol[1] = "Contradictor";
+		rol[2] = "Protocolante";
 	}
 	
 	public String escribirLista()
@@ -14,7 +18,13 @@ public class Seminario
 		String string = "";
 		for (int i = 0; i < sesion.length; i++)
 		{
-			sesion[i] = "Sujeto "+i+"\n";
+			double rolAleatorio = Math.random()*((2-0)+1)+0;
+			int numero = (int) rolAleatorio;
+			if(numero < 0)
+				numero *= -1;
+			if(numero > 2)
+				numero /= 100*3;
+			sesion[i] = "Sujeto "+i+" > Rol: "+rol[numero]+"\n";
 			string += sesion[i];
 		}
 		return string;
@@ -22,13 +32,13 @@ public class Seminario
 	
 	public String capturarSujeto()
 	{
-		double numRandom = Math.random()*100;
+		double numRandom = Math.random()*((31-0)+1)+0;
 		int numero = (int) numRandom;
 		if(numero < 0)
 		{
 			numero *= -1;
 		}
-		if(numero >30)
+		if(numero > 31)
 		{
 			numero /= 10;
 		}
@@ -46,11 +56,33 @@ public class Seminario
 		
 		return "Se ha seleccionado al sujeto";
 	}
+	
+	public String escribirdesdeNombres(String pSesion)
+	{
+		String string = "";
+		for (int i = 0; i < sesion.length; i++) 
+		{
+			double rolAleatorio = Math.random()*((2-0)+1)+0;
+			int numero = (int) rolAleatorio;
+			if(numero < 0)
+				numero *= -1;
+			if(numero > 2)
+				numero /= 100*3;
+			sesion[i] = pSesion+" > Rol: "+rol[numero];
+			string += sesion[i];
+		}
+		
+		return string;
+		
+	}
 
 	public String[] getSesion() {
 		return sesion;
 	}
-
+	
+	public void setSesion(String[] sesion) {
+		this.sesion = sesion;
+	}
 
 	public String verificarCupo() 
 	{
