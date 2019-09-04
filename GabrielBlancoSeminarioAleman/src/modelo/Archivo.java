@@ -58,7 +58,7 @@ public class Archivo
 		catch (FileNotFoundException e)
 		{
 			Date date = new Date();
-			DateFormat format = new SimpleDateFormat("dd/mm/yyyy hh:mm:ss");
+			DateFormat format = new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
 			return "Comienza el archivo: "+format.format(date)+"\n";
 		}
 		catch (IOException e) 

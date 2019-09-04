@@ -51,7 +51,7 @@ public class Seminario
 		{
 			if(sesion[i] == null)
 			{
-				i = cantidadCupo+30;
+				cantidadCupo++;
 			}
 		}
 		
