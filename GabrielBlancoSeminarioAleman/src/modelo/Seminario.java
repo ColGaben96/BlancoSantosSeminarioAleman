@@ -28,11 +28,11 @@ public class Seminario
 		{
 			try 
 			{
-			     return "Se eligió a "+sesion[numero];
+				return "Se eligió a "+sesion[numero];
 			} 
 			catch (Exception e) 
 			{
-				
+				// TODO: handle exception
 			}
 		}
 		
