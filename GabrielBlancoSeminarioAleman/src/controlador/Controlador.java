@@ -31,7 +31,7 @@ public class Controlador
 					gui.Error(comando+" no es valido. Escribe \"ayuda\" para mas informacion.");
 					break;
 				case("ayuda"):
-					gui.Information("\"salir\" salir");
+					gui.Information("\"seminario\" para mostrar el seminario\n\"verificacion\" Verifica la cantidad de cupo\n\"salir\" salir");
 					break;
 				case("salir"):
 					activo = false;
