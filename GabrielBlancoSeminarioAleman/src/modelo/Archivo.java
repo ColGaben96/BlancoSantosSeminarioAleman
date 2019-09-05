@@ -69,40 +69,36 @@ public class Archivo
 		
 		return lineaAnterior;
 	}
-	public String[] leerDesdenombresTXT()
+	
+	public String leerDesdenombresTXT()
 	{
-		String[] victimas = "".split("\n");
 		try 
 		{
-			File elDirectorio = new File("./docs/SysFiles/nombres.txt");
+			File elDirectorio = new File("./docs/SysFiles/nombres2.txt");
 			file = new File(elDirectorio+"/");
 			fileReader = new FileReader(file);
 			bufferedReader = new BufferedReader(fileReader);
+			String[] victimas = new String[32];
 			String linea = bufferedReader.readLine();
 			victimas = bufferedReader.readLine().split("\n");
-			while(linea != null)
+			for (int i = 0; i < victimas.length; i++) 
 			{
-				for (int i = 0; i < victimas.length; i++) 
-				{
-					victimas[i].trim();
-					victimas[i] += linea +"\n";
-					linea = bufferedReader.readLine();
-;				}
+				victimas[i].trim();
+				victimas[i] += linea +"\n";
 			}
 			fileReader.close();
+			return linea;
 		}
 		catch (FileNotFoundException e)
 		{
-//			Date date = new Date();
-//			DateFormat format = new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
-//			return "Comienza el archivo: "+format.format(date)+"\n";
+			Date date = new Date();
+			DateFormat format = new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
+			return "Comienza el archivo: "+format.format(date)+"\n";
 		}
 		catch (IOException e) 
 		{
-//			return "Ocurrio un error en la lectura del archivo.\n Causas: "+e.getMessage();
+			return "Ocurrio un error en la lectura del archivo.\n Causas: "+e.getMessage();
 		}
-		
-		return victimas;
 	}
 
 	public int getNumeroSesion() {

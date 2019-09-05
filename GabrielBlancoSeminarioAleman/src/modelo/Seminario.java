@@ -54,7 +54,7 @@ public class Seminario
 			}
 		}
 		
-		return "Se ha seleccionado al sujeto";
+		return "Se ha seleccionado a "+sesion[numero];
 	}
 	
 	public String escribirdesdeNombres(String pSesion)
@@ -66,13 +66,19 @@ public class Seminario
 			int numero = (int) rolAleatorio;
 			if(numero < 0)
 				numero *= -1;
-			if(numero > 2)
-				numero /= 100*3;
 			sesion[i] = pSesion+" > Rol: "+rol[numero];
 			string += sesion[i];
 		}
 		
 		return string;
+//		String nombres = "";
+//		
+//		for (int i = 1; i < sesion.length; i++) 
+//		{
+//			sesion[i] = pSesion + "Sujeto "+sesion[i]+ " > Rol: "+ rol [(int) (Math.random()*((2-0)+1)+0)];
+//		}
+//		
+//		return nombres;
 		
 	}
 

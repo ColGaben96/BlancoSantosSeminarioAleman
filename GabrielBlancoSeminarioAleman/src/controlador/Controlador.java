@@ -45,8 +45,8 @@ public class Controlador
 					mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);
 					break;
 				case("seminario2"):
-					mundo.getSeminario().setSesion(mundo.getArchivo().leerDesdenombresTXT());
-					gui.Information(mundo.getArchivo().escribirArchivo(mundo.getSeminario().escribirdesdeNombres(mundo.getArchivo().lecturaArchivo())));
+					mundo.getSeminario().setSesion(mundo.getArchivo().leerDesdenombresTXT().split("\n"));
+					gui.Information(mundo.getArchivo().escribirArchivo(mundo.getSeminario().escribirdesdeNombres(mundo.getArchivo().leerDesdenombresTXT())));
 					mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+mundo.getSeminario().capturarSujeto());
 					mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);
 					break;
@@ -54,7 +54,7 @@ public class Controlador
 			} 
 			catch (Exception errorConsola) 
 			{
-				gui.ExceptionError(errorConsola.getMessage(), "Ha ocurrido un error fatal");
+				gui.ExceptionError(errorConsola.toString(), "Ha ocurrido un error fatal");
 			}
 		}
 	}
