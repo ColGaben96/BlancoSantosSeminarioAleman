@@ -42,27 +42,16 @@ public class Seminario
 	 * @return
 	 */
 	
-	public String capturarSujeto()
+	public String capturarSujeto(int numeroSesion)
 	{
-		double numRandom = Math.random()*((31-0)+1)+0;
-		int numero = (int) numRandom;
-		if(numero < 0)
+		try 
 		{
-			numero *= -1;
-		}
-		for (int i = 0; i < sesion.length; i++) 
+			return "Se eligió a "+sesion[numeroSesion];
+		} 
+		catch (Exception e) 
 		{
-			try 
-			{
-				return "Se eligió a "+sesion[numero];
-			} 
-			catch (Exception e) 
-			{
-				// No hace nada porque ya se sabe que la excepcion es gracias a un index fuera del limite.
-			}
+			return "No existe la sesion "+numeroSesion;
 		}
-		
-		return "Se ha seleccionado a "+sesion[numero];
 	}
 	
 	/**
@@ -71,20 +60,20 @@ public class Seminario
 	 * @return
 	 * @param pSesion
 	 */
-	public String escribirdesdeNombres(String pSesion)
+	public String escribirdesdeNombres(String pSesion, int numSesion)
 	{
 		String string = "";
 		String[] chain = pSesion.split("\n");
 		int grupo = 1;
 		int cantidadFinal = 0;
-		string += "\nGrupo "+grupo+"\n";
+		string += "Numero de Sesion: "+numSesion+"\nGrupo "+grupo+"\n";
 		for (int i = 0; i < sesion.length/2; i++) 
 		{
 			double rolAleatorio = Math.random()*((2-0)+1)+0;
 			int numero = (int) rolAleatorio;
 			if(numero < 0)
 				numero *= -1;
-			sesion[i] = chain[i]+" > Rol: "+rol[numero]+"\n";
+			sesion[i] = chain[i]+" > Rol: "+rol[numero]+" > Sesion: "+(cantidadFinal+1)+"\n";
 			string += sesion[i];
 			cantidadFinal++;
 		}
@@ -96,7 +85,7 @@ public class Seminario
 			int numero = (int) rolAleatorio;
 			if(numero < 0)
 				numero *= -1;
-			sesion[i] = chain[i]+" > Rol: "+rol[numero]+"\n";
+			sesion[i] = chain[i]+" > Rol: "+rol[numero]+" > Sesion: "+(cantidadFinal+1)+"\n";
 			string += sesion[i];
 			cantidadFinal++;
 		}
