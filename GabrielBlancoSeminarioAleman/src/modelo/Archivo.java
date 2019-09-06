@@ -75,7 +75,7 @@ public class Archivo
 		String lineaAnterior = "";
 		try 
 		{
-			File elDirectorio = new File("./docs/SysFiles/nombres2.txt");
+			File elDirectorio = new File("./docs/SysFiles/nombres.txt");
 			file = new File(elDirectorio+"/");
 			fileReader = new FileReader(file);
 			bufferedReader = new BufferedReader(fileReader);
