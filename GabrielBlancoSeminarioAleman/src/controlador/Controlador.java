@@ -3,7 +3,7 @@ package controlador;
 import modelo.Mundo;
 import vista.Interfaz;
 
-public class Controlador 
+public class Controlador
 {
 	private Mundo mundo;
 	private Interfaz gui;
@@ -46,8 +46,7 @@ public class Controlador
 					break;
 				case("seminario2"):
 					mundo.getSeminario().setSesion(mundo.getArchivo().leerDesdenombresTXT().split("\n"));
-					gui.Information(mundo.getArchivo().escribirArchivo(mundo.getSeminario().escribirdesdeNombres(mundo.getArchivo().leerDesdenombresTXT())));
-					mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+mundo.getSeminario().capturarSujeto());
+					gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirdesdeNombres(mundo.getArchivo().leerDesdenombresTXT())));
 					mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);
 					break;
 				}

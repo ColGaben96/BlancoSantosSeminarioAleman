@@ -22,8 +22,6 @@ public class Seminario
 			int numero = (int) rolAleatorio;
 			if(numero < 0)
 				numero *= -1;
-			if(numero > 2)
-				numero /= 100*3;
 			sesion[i] = "Sujeto "+i+" > Rol: "+rol[numero]+"\n";
 			string += sesion[i];
 		}
@@ -37,10 +35,6 @@ public class Seminario
 		if(numero < 0)
 		{
 			numero *= -1;
-		}
-		if(numero > 31)
-		{
-			numero /= 10;
 		}
 		for (int i = 0; i < sesion.length; i++) 
 		{
@@ -66,19 +60,11 @@ public class Seminario
 			int numero = (int) rolAleatorio;
 			if(numero < 0)
 				numero *= -1;
-			sesion[i] = pSesion+" > Rol: "+rol[numero];
+			sesion[i] = pSesion+" > Rol: "+rol[numero]+"\n";
 			string += sesion[i];
 		}
 		
 		return string;
-//		String nombres = "";
-//		
-//		for (int i = 1; i < sesion.length; i++) 
-//		{
-//			sesion[i] = pSesion + "Sujeto "+sesion[i]+ " > Rol: "+ rol [(int) (Math.random()*((2-0)+1)+0)];
-//		}
-//		
-//		return nombres;
 		
 	}
 

@@ -72,22 +72,20 @@ public class Archivo
 	
 	public String leerDesdenombresTXT()
 	{
+		String lineaAnterior = "";
 		try 
 		{
 			File elDirectorio = new File("./docs/SysFiles/nombres2.txt");
 			file = new File(elDirectorio+"/");
 			fileReader = new FileReader(file);
 			bufferedReader = new BufferedReader(fileReader);
-			String[] victimas = new String[32];
 			String linea = bufferedReader.readLine();
-			victimas = bufferedReader.readLine().split("\n");
-			for (int i = 0; i < victimas.length; i++) 
+			while(linea != null)
 			{
-				victimas[i].trim();
-				victimas[i] += linea +"\n";
+				lineaAnterior += linea +"\n";
+				linea = bufferedReader.readLine();
 			}
 			fileReader.close();
-			return linea;
 		}
 		catch (FileNotFoundException e)
 		{
@@ -99,6 +97,7 @@ public class Archivo
 		{
 			return "Ocurrio un error en la lectura del archivo.\n Causas: "+e.getMessage();
 		}
+		return lineaAnterior;
 	}
 
 	public int getNumeroSesion() {
