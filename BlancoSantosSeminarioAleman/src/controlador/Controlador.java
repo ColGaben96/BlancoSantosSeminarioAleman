@@ -25,42 +25,31 @@ public class Controlador
 	// Metodo de ejecucion del programa con sentencia try/catch 
 	public void iniciarPrograma()
 	{
-		boolean activo = true;
-		while(activo == true)
-		{
-			try 
-			{
-				comando = gui.AppInput(System.in, "Ingresa un comando", "Gabriel Blanco; Julian Santos - Seminario Aleman"); // Ventana Inicial con Titulo y Campo de texto para el comando
-				switch(comando)
-				{
-				default:
-					gui.Error(comando+" no es valido. Escribe \"ayuda\" para mas informacion.");
-					break;
-				case("ayuda"):
-					gui.Information("\"seminario\" para mostrar el seminario\n\"verificacion\" Verifica la cantidad de cupo\n\"salir\" salir");// muestra el funcionamiento del programa
-					break;
-				case("salir"):
-					activo = false;
-					break;
-				case("verificacion"):
-					gui.WarningMessage(mundo.getSeminario().verificarCupo());// muestra el cupo disponible
-					break;
-				case("seminario"):
-					gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirLista()));
-					mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+mundo.getSeminario().capturarSujeto());
-					mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);
-					break;
-				case("seminario2"):
-					gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirdesdeNombres(mundo.getArchivo().leerDesdenombresTXT())));
-					mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+mundo.getSeminario().capturarSujeto());
-					mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);
-					break;
-				}
-			} 
-			catch (Exception errorConsola) 
-			{
-				gui.ExceptionError(errorConsola.toString(), "Ha ocurrido un error fatal");
+		try {
+			
+			int  opc = Integer.parseInt(gui.pedirDato());
+			
+			if(opc == 1) {
+				
+				int numeroSujeto = Integer.parseInt(gui.pedirDato());
+				gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirdesdeNombres(mundo.getArchivo().leerDesdenombresTXT())));
+				//mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+mundo.getSeminario().capturarSujeto());
+				//mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);
+				
 			}
+			
+			if(opc == 2) {
+				
+			}
+			
+			if(opc == 3 ) {
+				
+			}
+			
+		} catch (Exception e) {
+			
+			System.out.println("Ingrese numeros , no letras");
 		}
+		
 	}
 }

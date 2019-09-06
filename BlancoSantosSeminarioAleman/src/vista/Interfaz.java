@@ -39,4 +39,9 @@ public class Interfaz
 	{
 		JOptionPane.showMessageDialog(null, insertyerMessageHere, "Ayuda", JOptionPane.PLAIN_MESSAGE, icon);
 	}
+	
+	public String pedirDato() {
+		return (JOptionPane.showInputDialog(null,"Ingrese un numero para seleccionar una opcion\n" + "  1.Imprimir Sesion \n"
+						+ "  2.Numero de Sesion\n" , "Gabriel Blanco - Julian Santos - Seminario", JOptionPane.INFORMATION_MESSAGE));
+	}
 }
