@@ -23,16 +23,23 @@ public class Controlador
 	// Metodo de ejecucion del programa con sentencia try/catch 
 	public void iniciarPrograma()
 	{
-		try 
+		boolean activo = true;
+		while(activo == true)
 		{
-			
-			int numeroSujeto = Integer.parseInt(gui.pedirDato());
-			gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirdesdeNombres(mundo.getArchivo().leerDesdenombresTXT(), mundo.getArchivo().getNumeroSesion())));
-			mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+mundo.getSeminario().capturarSujeto(numeroSujeto));
-			mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);	
-		} catch (Exception e) {
-			
-			gui.Error("Ingrese numeros , no letras");
+			try 
+			{
+				
+				int numeroSujeto = Integer.parseInt(gui.pedirDato());
+				gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirdesdeNombres(mundo.getArchivo().leerDesdenombresTXT(), mundo.getArchivo().getNumeroSesion())));
+				mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+mundo.getSeminario().capturarSujeto(numeroSujeto));
+				mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);	
+				activo = false;
+			} 
+			catch (Exception e) 
+			{
+				
+				gui.Error("Ingrese numeros , no letras");
+			}
 		}
 		
 	}
