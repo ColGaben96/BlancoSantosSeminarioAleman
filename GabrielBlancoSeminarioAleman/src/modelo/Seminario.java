@@ -54,13 +54,14 @@ public class Seminario
 	public String escribirdesdeNombres(String pSesion)
 	{
 		String string = "";
+		String[] chain = pSesion.split("\n");
 		for (int i = 0; i < sesion.length; i++) 
 		{
 			double rolAleatorio = Math.random()*((2-0)+1)+0;
 			int numero = (int) rolAleatorio;
 			if(numero < 0)
 				numero *= -1;
-			sesion[i] = pSesion+" > Rol: "+rol[numero]+"\n";
+			sesion[i] = chain[i]+" > Rol: "+rol[numero]+"\n";
 			string += sesion[i];
 		}
 		

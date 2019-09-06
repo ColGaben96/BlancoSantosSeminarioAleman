@@ -45,8 +45,8 @@ public class Controlador
 					mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);
 					break;
 				case("seminario2"):
-					mundo.getSeminario().setSesion(mundo.getArchivo().leerDesdenombresTXT().split("\n"));
 					gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirdesdeNombres(mundo.getArchivo().leerDesdenombresTXT())));
+					mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+mundo.getSeminario().capturarSujeto());
 					mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);
 					break;
 				}
