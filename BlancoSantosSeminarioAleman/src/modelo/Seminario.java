@@ -6,15 +6,20 @@ package modelo;
  */
 public class Seminario 
 {
-	private String[] sesion, rol;
+	private String[] sesion, rol, inicialRol;
 	
 	public Seminario()
 	{
 		sesion = new String[32];
 		rol = new String[3];
+		inicialRol = new String[3];
 		rol[0] = "Relator";
 		rol[1] = "Contradictor";
 		rol[2] = "Protocolante";
+		inicialRol[0] = "R";
+		inicialRol[1] = "C";
+		inicialRol[2] = "P";
+		
 	}
 	
 	/**
@@ -64,28 +69,15 @@ public class Seminario
 	{
 		String string = "";
 		String[] chain = pSesion.split("\n");
-		int grupo = 1;
 		int cantidadFinal = 0;
-		string += "Numero de Sesion: "+numSesion+"\nGrupo "+grupo+"\n";
-		for (int i = 0; i < sesion.length/2; i++) 
+		string += "Numero,Nombre,Rol,Sesion,Codigo\n";
+		for (int i = 0; i < sesion.length; i++) 
 		{
 			double rolAleatorio = Math.random()*((2-0)+1)+0;
 			int numero = (int) rolAleatorio;
 			if(numero < 0)
 				numero *= -1;
-			sesion[i] = chain[i]+" > Rol: "+rol[numero]+" > Sesion: "+(cantidadFinal)+"\n";
-			string += sesion[i];
-			cantidadFinal++;
-		}
-		grupo++;
-		string += "\nGrupo "+grupo+"\n";
-		for (int i = cantidadFinal; i < sesion.length; i++) 
-		{
-			double rolAleatorio = Math.random()*((2-0)+1)+0;
-			int numero = (int) rolAleatorio;
-			if(numero < 0)
-				numero *= -1;
-			sesion[i] = chain[i]+" > Rol: "+rol[numero]+" > Sesion: "+(cantidadFinal)+"\n";
+			sesion[i] = (cantidadFinal+1)+","+chain[i]+","+rol[numero]+","+numSesion+","+inicialRol[numero]+numSesion+"\n";
 			string += sesion[i];
 			cantidadFinal++;
 		}

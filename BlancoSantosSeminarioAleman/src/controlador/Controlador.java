@@ -29,10 +29,8 @@ public class Controlador
 			try 
 			{
 				
-				int numeroSujeto = Integer.parseInt(gui.pedirDato());
-				gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirdesdeNombres(mundo.getArchivo().leerDesdenombresTXT(), mundo.getArchivo().getNumeroSesion())));
-				mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+mundo.getSeminario().capturarSujeto(numeroSujeto));
-				mundo.getArchivo().setNumeroSesion(mundo.getArchivo().getNumeroSesion()+1);	
+				int numeroSesion = Integer.parseInt(gui.pedirDato());
+				gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirdesdeNombres(mundo.getArchivo().leerDesdenombresTXT(), numeroSesion),numeroSesion));
 				activo = false;
 			} 
 			catch (Exception e) 

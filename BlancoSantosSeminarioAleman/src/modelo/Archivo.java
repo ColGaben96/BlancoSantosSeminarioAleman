@@ -18,7 +18,7 @@ public class Archivo
 	private FileReader fileReader; // lee el archivo
 	private PrintWriter printWriter; 
 	private BufferedReader bufferedReader;
-	private int numeroSesion = 0;
+	private int numeroSesion;
 	
 	/**
 	 *  Metodo que escribe un archivo en el directorio especificado y este le asigna un numero de sesion que depende de los ya creados
@@ -26,8 +26,9 @@ public class Archivo
 	 * @return
 	 */
 	
-	public String escribirArchivo(String pLinea)
+	public String escribirArchivo(String pLinea, int numSesion)
 	{
+		numeroSesion = numSesion;
 		try 
 		{
 			File elDirectorio = new File("./docs/SysFiles");
@@ -35,7 +36,7 @@ public class Archivo
 			{
 				elDirectorio.mkdir();
 			}
-			file = new File(elDirectorio+"/Sesion "+numeroSesion+".txt");
+			file = new File(elDirectorio+"/Sesion "+numeroSesion+".csv");
 			fileWriter = new FileWriter(file);
 			printWriter = new PrintWriter(fileWriter);
 			for (int i = 0; i < 1; i++) 
@@ -61,7 +62,7 @@ public class Archivo
 		String lineaAnterior = "";
 		try 
 		{
-			File elDirectorio = new File("./docs/SysFiles/Sesion "+numeroSesion+".txt");
+			File elDirectorio = new File("./docs/SysFiles/Sesion "+numeroSesion+".csv");
 			file = new File(elDirectorio+"/");
 			fileReader = new FileReader(file);
 			bufferedReader = new BufferedReader(fileReader);
