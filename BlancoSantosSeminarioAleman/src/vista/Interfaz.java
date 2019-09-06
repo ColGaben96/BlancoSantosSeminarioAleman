@@ -4,13 +4,21 @@ import java.io.InputStream;
 
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-
+/**
+ * @author Gabriel Blanco - Julian Santos
+ *
+ */
 public class Interfaz 
 {
+	/**
+	 *  Utilizacion de la libreria JOptionPane para tener la interaccion con el usuario
+	 */
+	
 	public void Information(String insertyerMessageHere)
 	{
 		JOptionPane.showMessageDialog(null, insertyerMessageHere, "Operacion Finalizada", JOptionPane.INFORMATION_MESSAGE); //Aviso de finalización de operación
 	}
+	
 	public void Error(String insertyerMessageHere)
 	{
 		JOptionPane.showMessageDialog(null, insertyerMessageHere, "Error", JOptionPane.ERROR_MESSAGE); //Aviso de error

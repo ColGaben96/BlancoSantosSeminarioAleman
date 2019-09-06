@@ -1,5 +1,9 @@
 package modelo;
 
+/**
+ * @author Gabriel Blanco - Julian Santos
+ *
+ */
 public class Seminario 
 {
 	private String[] sesion, rol;
@@ -12,6 +16,11 @@ public class Seminario
 		rol[1] = "Contradictor";
 		rol[2] = "Protocolante";
 	}
+	
+	/**
+	 *  Metodo que asigna un sujeto con un rol completamente aleatorio , utilizando la funcion Math.random donde este da un numero aleatorio 
+	 * @return
+	 */
 	
 	public String escribirLista()
 	{
@@ -27,6 +36,11 @@ public class Seminario
 		}
 		return string;
 	}
+	
+	/**
+	 *  Metodo que muestra el sujeto con su rol en el archivo  se utiliza la funcion Math.random donde este da un numero aleatorio para dar el rol 
+	 * @return
+	 */
 	
 	public String capturarSujeto()
 	{
@@ -51,6 +65,12 @@ public class Seminario
 		return "Se ha seleccionado a "+sesion[numero];
 	}
 	
+	/**
+	 * Método que captura los nombres del archivo.txt y los ingresa bajo parámetro en un String[]. Luego, este debe mediante un for, organizar las 32 personas en grupos equitativos.
+	 * Al final, retorna un String con los nombres y roles asignados.
+	 * @return
+	 * @param pSesion
+	 */
 	public String escribirdesdeNombres(String pSesion)
 	{
 		String string = "";
@@ -84,6 +104,11 @@ public class Seminario
 		return string;
 		
 	}
+	
+	/**
+	 *  Getter y Setter de la Sesion
+	 * @return
+	 */
 
 	public String[] getSesion() {
 		return sesion;
@@ -93,6 +118,11 @@ public class Seminario
 		this.sesion = sesion;
 	}
 
+	/**
+	 *  Metodo que muestra el cupo en cada sesion
+	 * @return
+	 */
+	
 	public String verificarCupo() 
 	{
 		int cantidadCupo = 0;

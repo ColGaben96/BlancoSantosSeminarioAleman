@@ -4,15 +4,27 @@ import java.io.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+/**
+ * @author Gabriel Blanco - Julian Santos
+ *
+ */
 public class Archivo 
 {
-	private File file;
-	private FileWriter fileWriter;
-	private FileReader fileReader;
-	private PrintWriter printWriter;
+	/**
+	 * Atributos de Archivos de Texto 	
+	 */
+	private File file; // Archivo
+	private FileWriter fileWriter;// escribe el archivo
+	private FileReader fileReader; // lee el archivo
+	private PrintWriter printWriter; 
 	private BufferedReader bufferedReader;
 	private int numeroSesion = 0;
+	
+	/**
+	 *  Metodo que escribe un archivo en el directorio especificado y este le asigna un numero de sesion que depende de los ya creados
+	 * @param pLinea
+	 * @return
+	 */
 	
 	public String escribirArchivo(String pLinea)
 	{
@@ -38,6 +50,11 @@ public class Archivo
 		}
 		return "Se ha creado el archivo correctamente en "+file.getAbsolutePath();
 	}
+	
+	/**
+	 *  Metodo que lee un archivo y este se le asigna de libreria de Java.Date para dar el comienzo del archivo
+	 * @return
+	 */
 	
 	public String lecturaArchivo()
 	{
@@ -70,6 +87,11 @@ public class Archivo
 		return lineaAnterior;
 	}
 	
+	/**
+	 *  Metodo que lee los nombres del txt dado para asignarlos a la secuencia del seminario , se utiliza libreria de Java.Date para dar el comienzo del archivo
+	 * @return
+	 */
+	
 	public String leerDesdenombresTXT()
 	{
 		String lineaAnterior = "";
@@ -100,6 +122,8 @@ public class Archivo
 		return lineaAnterior;
 	}
 
+	// Get y Set del NumeroSesion
+	
 	public int getNumeroSesion() {
 		return numeroSesion;
 	}
