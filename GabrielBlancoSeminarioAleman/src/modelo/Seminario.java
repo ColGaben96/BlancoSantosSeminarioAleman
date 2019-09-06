@@ -16,13 +16,13 @@ public class Seminario
 	public String escribirLista()
 	{
 		String string = "";
-		for (int i = 0; i < sesion.length; i++)
+		for (int i = 0; i < sesion.length-2; i++)
 		{
 			double rolAleatorio = Math.random()*((2-0)+1)+0;
 			int numero = (int) rolAleatorio;
 			if(numero < 0)
 				numero *= -1;
-			sesion[i] = "Sujeto "+i+" > Rol: "+rol[numero]+"\n";
+			sesion[i] = "Sujeto "+(i+1)+" > Rol: "+rol[numero]+"\n";
 			string += sesion[i];
 		}
 		return string;
@@ -55,7 +55,10 @@ public class Seminario
 	{
 		String string = "";
 		String[] chain = pSesion.split("\n");
-		for (int i = 0; i < sesion.length; i++) 
+		int grupo = 1;
+		int cantidadFinal = 0;
+		string += "\nGrupo "+grupo+"\n";
+		for (int i = 0; i < sesion.length/2; i++) 
 		{
 			double rolAleatorio = Math.random()*((2-0)+1)+0;
 			int numero = (int) rolAleatorio;
@@ -63,6 +66,19 @@ public class Seminario
 				numero *= -1;
 			sesion[i] = chain[i]+" > Rol: "+rol[numero]+"\n";
 			string += sesion[i];
+			cantidadFinal++;
+		}
+		grupo++;
+		string += "\nGrupo "+grupo+"\n";
+		for (int i = cantidadFinal; i < sesion.length; i++) 
+		{
+			double rolAleatorio = Math.random()*((2-0)+1)+0;
+			int numero = (int) rolAleatorio;
+			if(numero < 0)
+				numero *= -1;
+			sesion[i] = chain[i]+" > Rol: "+rol[numero]+"\n";
+			string += sesion[i];
+			cantidadFinal++;
 		}
 		
 		return string;
