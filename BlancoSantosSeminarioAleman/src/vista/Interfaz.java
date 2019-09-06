@@ -41,7 +41,6 @@ public class Interfaz
 	}
 	
 	public String pedirDato() {
-		return (JOptionPane.showInputDialog(null,"Ingrese un numero para seleccionar una opcion\n" + "  1.Imprimir Sesion \n"
-						+ "  2.Numero de Sesion\n" , "Gabriel Blanco - Julian Santos - Seminario", JOptionPane.INFORMATION_MESSAGE));
+		return (JOptionPane.showInputDialog(null,"Ingresa el numero de la sesion a seleccionar [0-31]" , "Gabriel Blanco - Julian Santos - Seminario", JOptionPane.INFORMATION_MESSAGE));
 	}
 }

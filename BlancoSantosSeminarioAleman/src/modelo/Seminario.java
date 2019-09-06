@@ -73,7 +73,7 @@ public class Seminario
 			int numero = (int) rolAleatorio;
 			if(numero < 0)
 				numero *= -1;
-			sesion[i] = chain[i]+" > Rol: "+rol[numero]+" > Sesion: "+(cantidadFinal+1)+"\n";
+			sesion[i] = chain[i]+" > Rol: "+rol[numero]+" > Sesion: "+(cantidadFinal)+"\n";
 			string += sesion[i];
 			cantidadFinal++;
 		}
@@ -85,7 +85,7 @@ public class Seminario
 			int numero = (int) rolAleatorio;
 			if(numero < 0)
 				numero *= -1;
-			sesion[i] = chain[i]+" > Rol: "+rol[numero]+" > Sesion: "+(cantidadFinal+1)+"\n";
+			sesion[i] = chain[i]+" > Rol: "+rol[numero]+" > Sesion: "+(cantidadFinal)+"\n";
 			string += sesion[i];
 			cantidadFinal++;
 		}
