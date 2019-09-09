@@ -10,11 +10,13 @@ public class Mundo
 	 */
 	private Archivo archivo;
 	private Seminario seminario;
+	private Propiedades propiedades;
 	
 	public Mundo()
 	{
 		archivo = new Archivo();
 		seminario = new Seminario();
+		propiedades = new Propiedades();
 	}
 	
 	/**
@@ -28,5 +30,11 @@ public class Mundo
 	public Seminario getSeminario() {
 		return seminario;
 	}
+
+	public Propiedades getPropiedades() {
+		return propiedades;
+	}
+	
+	
 	
 }

@@ -31,12 +31,13 @@ public class Controlador
 				
 				int numeroSesion = Integer.parseInt(gui.pedirDato());
 				gui.Information(mundo.getArchivo().escribirArchivo(mundo.getArchivo().lecturaArchivo()+"\n"+mundo.getSeminario().escribirdesdeNombres(mundo.getArchivo().leerDesdenombresTXT(), numeroSesion),numeroSesion));
+				gui.Information(mundo.getPropiedades().getPropiedades()+mundo.getPropiedades().setPropiedades(numeroSesion));
 				activo = false;
 			} 
 			catch (Exception e) 
 			{
 				
-				gui.Error("Ingrese numeros , no letras");
+				gui.Error("Ingrese numeros, no letras\n"+e.toString());
 			}
 		}
 		
