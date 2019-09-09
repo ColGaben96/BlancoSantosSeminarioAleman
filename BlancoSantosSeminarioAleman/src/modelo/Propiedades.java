@@ -15,6 +15,7 @@ public class Propiedades
 			property.load(new FileReader(directorio));
 			String propiedades = property.getProperty("NumeroSesiones")+"\n";
 			propiedades += property.getProperty("numeroRoles");
+			propiedades += property.getProperty("Autores");
 			return propiedades;
 		} 
 		catch (FileNotFoundException e)
@@ -33,6 +34,7 @@ public class Propiedades
 		{
 			property.setProperty("NumeroSesiones", ""+pSesion);
 			property.setProperty("numeroRoles", "3");
+			property.setProperty("Autores", "Gabriel Blanco,Julian Santos");
 			property.store(new FileWriter(directorio),"Comentario");
 			return "Propiedades guardadas";
 		} 
